@@ -19,3 +19,5 @@ fields:
       format: markdown
   label: Bio
   description: Author bio
+pages:
+- content/data/authors/john.json
