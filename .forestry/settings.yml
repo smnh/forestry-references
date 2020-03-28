@@ -17,6 +17,12 @@ sections:
 - type: document
   path: content/data/authors.yaml
   label: Author List
+- type: directory
+  path: content/data/authors
+  label: Authors
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".json"
 - type: document
   path: content/data/info.json
   label: Info Page
