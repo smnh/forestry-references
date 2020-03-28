@@ -8,6 +8,13 @@ fields:
 - type: text
   name: lastName
   label: lastName
-- type: text
-  name: bio
-  label: bio
+- name: bio
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Bio
+  description: Author bio
