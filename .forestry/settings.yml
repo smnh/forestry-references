@@ -23,6 +23,8 @@ sections:
   create: documents
   match: "**/*"
   new_doc_ext: json
+  templates:
+  - author
 - type: document
   path: content/data/info.json
   label: Info Page
