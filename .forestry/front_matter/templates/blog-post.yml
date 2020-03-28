@@ -35,6 +35,19 @@ fields:
   label: hero image
   description: Enter hero image for blog post here
   default: "/content/images/sarah-dorweiler-9Z1KRIfpBTM-unsplash.jpg"
+- name: author_test
+  type: select
+  default: ''
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: authors
+      file: content/data/authors/bob.json
+      path: 
+  label: Author test
+  description: Post author
 pages:
 - content/posts/an-essay-on-walking.md
 - content/posts/ne-te-quaesiveris-extra.md
