@@ -1,0 +1,13 @@
+---
+label: Author
+hide_body: true
+fields:
+- type: text
+  name: firstName
+  label: firstName
+- type: text
+  name: lastName
+  label: lastName
+- type: text
+  name: bio
+  label: bio
