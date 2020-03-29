@@ -14,15 +14,12 @@ sections:
   new_doc_ext: md
   templates:
   - blog-post
-- type: document
-  path: content/data/authors.yaml
-  label: Author List
 - type: directory
   path: content/data/authors
   label: Authors
   create: documents
   match: "**/*"
-  new_doc_ext: json
+  new_doc_ext: yaml
   templates:
   - author
 - type: document

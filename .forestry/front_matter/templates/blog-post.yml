@@ -12,25 +12,20 @@ fields:
     required: true
     options: []
     source:
-      type: documents
-      section: author-list
-      file: content/data/authors.yaml
-      path: authors
-  label: author
-  description: Enter author of post
-- name: author_test
-  type: select
-  default: ''
+      type: pages
+      section: authors
+  label: Author test
+  description: Post author
+- name: co_authors
+  type: list
+  label: Co-authors
+  description: Post co-author
   config:
     required: false
     options: []
     source:
       type: pages
       section: authors
-      file: content/data/authors/bob.json
-      path: 
-  label: Author test
-  description: Post author
 - name: date
   type: datetime
   label: date

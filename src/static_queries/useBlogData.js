@@ -26,7 +26,31 @@ export default function useBlogData() {
           }
         }
       }
+      allAuthorsYaml {
+        edges {
+          node {
+            firstName
+            lastName
+            bio
+            parent {
+              ... on File {
+                relativePath
+                relativeDirectory
+                base
+              }
+            }
+          }
+        }
+      }
     }
-  `)
-  return data.allMarkdownRemark.edges
+  `);
+  const authors = data.allAuthorsYaml.edges.map(edge => edge.node);
+  const blogs = data.allMarkdownRemark.edges.map(edge => {
+    const node = edge.node;
+    const authorPath = node.frontmatter.author;
+    const author = authorPath ? authors.find(author => authorPath.indexOf(author.parent.relativePath) >= 0) : null;
+    node.frontmatter.authorObj = author;
+    return node;
+  });
+  return blogs
 }

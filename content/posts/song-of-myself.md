@@ -1,10 +1,8 @@
 ---
 date: 2019-07-22T22:44:38.000+00:00
 title: Song of Myself
-author: Ralph Waldo Emerson
+author: content/data/authors/simon.yaml
 hero_image: "/content/images/ren-ran-bBiuSdck8tU-unsplash.jpg"
-author_test: content/data/authors/simon.json
-
 ---
 I have heard what the talkers were talking, the talk of the  
  beginning and the end

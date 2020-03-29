@@ -10,23 +10,23 @@ export default function BlogList() {
     return (
       <div>
         {blogData
-          .filter(blog => blog.node.frontmatter.title !== "")
+          .filter(blog => blog.frontmatter.title !== "")
           .map(blog => {
             return (
-              <Link to={`/blog/${blog.node.fields.slug}`} key={blog.node.id}>
-                <li className={blogListStyles.li} key={blog.node.fields.slug}>
+              <Link to={`/blog/${blog.fields.slug}`} key={blog.id}>
+                <li className={blogListStyles.li} key={blog.fields.slug}>
                   <div className={blogListStyles.list__hero}>
                     <Img 
                       fluid={
-                        blog.node.frontmatter.hero_image.childImageSharp.fluid
+                        blog.frontmatter.hero_image.childImageSharp.fluid
                       }
-                      alt={blog.node.frontmatter.title}
+                      alt={blog.frontmatter.title}
                     />
                   </div>
                   <div className={blogListStyles.list__info}>
-                    <h2>{blog.node.frontmatter.title}</h2>
-                    <h3>{blog.node.frontmatter.date}</h3>
-                    <p>{blog.node.excerpt}</p>
+                    <h2>{blog.frontmatter.title}</h2>
+                    <h3>{blog.frontmatter.date}{blog.frontmatter.authorObj ? ` by ${blog.frontmatter.authorObj.firstName}` : null}</h3>
+                    <p>{blog.excerpt}</p>
                   </div>
                 </li>
               </Link>
