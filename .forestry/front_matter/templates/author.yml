@@ -20,7 +20,7 @@ fields:
   label: Bio
   description: Author bio
 pages:
-- content/data/authors/john.yaml
 - content/data/authors/alice.yaml
 - content/data/authors/bob.yaml
+- content/data/authors/john.yaml
 - content/data/authors/simon.yaml
