@@ -14,7 +14,7 @@ fields:
     source:
       type: pages
       section: authors
-  label: Author test
+  label: Author
   description: Post author
 - name: co_authors
   type: list
@@ -26,6 +26,7 @@ fields:
     source:
       type: pages
       section: authors
+    use_select: true
 - name: date
   type: datetime
   label: date
